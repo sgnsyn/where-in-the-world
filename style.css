@@ -21,6 +21,7 @@
   --font_size_moderate: 1rem;
   --font_size_big: 1.375rem;
   --font_size_small: 0.4rem;
+  --display: inline-block;
 }
 
 /* presetes */
@@ -53,6 +54,21 @@ body {
   background-color: var(--background_color);
   color: var(--text_color);
   min-height: 100vh;
+  position: relative;
+}
+body::before {
+  content: "";
+  display: var(--display);
+  position: absolute;
+  height: 25vh;
+  width: 25vh;
+  border-radius: 50%;
+  border: 0.3em solid;
+  border-color: var(--text_color) transparent var(--text_color) transparent;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -5%);
+  animation: spin 1.4s ease-in-out infinite;
 }
 .header {
   display: flex;
@@ -259,6 +275,11 @@ body {
   }
   .row {
     flex-direction: row;
+  }
+}
+@keyframes spin {
+  to {
+    transform: translate(-50%, -5%) rotate(360deg);
   }
 }
 @media (min-width: 600px) and (min-aspect-ratio: 0.625) and (max-aspect-ratio: 1.6) {
