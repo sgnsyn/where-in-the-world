@@ -29,15 +29,11 @@ Users should be able to:
 ### Screenshot
 
 ![](./screenshots/Screen%20Shot%202023-05-13%20at%2016.34.14.png)
-![](./screenshots/Screen%20Shot%202023-05-13%20at%2016.34.30.png)
-![](./screenshots/Screen%20Shot%202023-05-13%20at%2016.34.38.png)
-![](./screenshots/Screen%20Shot%202023-05-13%20at%2016.34.45.png)
-![](./screenshots/Screen%20Shot%202023-05-13%20at%2016.34.55.png)
-![](./screenshots/Screen%20Shot%202023-05-13%20at%2016.34.59.png)
+
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: (https://github.com/sgnsyn/where-in-the-world)
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 ## My process
