@@ -42,9 +42,7 @@ select {
   color: inherit;
   font-size: var(--font_size_moderate);
 }
-select option {
-  font-size: var(--font_size_small);
-}
+
 input {
   font-size: var(--font_size_moderate);
 }
