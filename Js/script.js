@@ -34,6 +34,7 @@ dark_mode_btn.addEventListener("click", () => {
 // function to display the countries
 async function display() {
   // load object
+  startSpinning();
   const results = await getData().catch((error) => {});
 
   results.forEach((result) => {
@@ -42,7 +43,7 @@ async function display() {
 
     //display values
     const innnerHTMLstr = ` <div class="element">
-    <img src="${flag}" alt="" class="img" />
+    <img src="${flag}" alt=" ${name}flag" loading="lazy" class="img" />
     <div class="element_description">
       <p class="name"><span class="to_upper bold">${name || "N\\A"}</span></p>
       <p>
@@ -65,7 +66,7 @@ async function display() {
     </div>`;
     element_container.innerHTML += innnerHTMLstr;
   });
-
+  stopSpinning();
   return findAll("element");
 }
 
@@ -246,4 +247,12 @@ async function onWindowLoad() {
       }
     });
   });
+}
+
+//spinning animation function
+function startSpinning() {
+  setRootProperty("--display", "inline-block");
+}
+function stopSpinning() {
+  setRootProperty("--display", "none");
 }
