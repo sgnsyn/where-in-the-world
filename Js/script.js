@@ -43,7 +43,7 @@ async function display() {
 
     //display values
     const innnerHTMLstr = ` <div class="element">
-    <img src="${flag}" alt=" ${name}flag" loading="lazy" class="img" />
+    <img src="${flag}" alt=" ${name}flag" class="img" />
     <div class="element_description">
       <p class="name"><span class="to_upper bold">${name || "N\\A"}</span></p>
       <p>
