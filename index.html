@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="./Js/data.js" defer></script>
+    <script src="./Js/script.js" defer></script>
+    <script src="./Js/theme.js"></script>
+    <title>Where in the world</title>
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="title">Where in the world?</h1>
+      <button class="dark_mode_btn">
+        <span class="svg">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width=".75em"
+            height=".75em"
+            viewBox="0 0 84.543 82.066"
+          >
+            <g id="night-moon-svgrepo-com" transform="translate(1 1.066)">
+              <g
+                id="Group_1"
+                data-name="Group 1"
+                transform="translate(0 0.001)"
+              >
+                <path
+                  class="dark_mode_svg"
+                  id="Path_5"
+                  data-name="Path 5"
+                  d="M81.333,50.569a3.979,3.979,0,0,0-4.267-.806A35.788,35.788,0,0,1,63.4,52.447a35.316,35.316,0,0,1-24.745-9.942A33.085,33.085,0,0,1,31.172,5.244a3.69,3.69,0,0,0-.831-4.139A3.977,3.977,0,0,0,26.074.3,42.639,42.639,0,0,0,12.529,9.165a40.618,40.618,0,0,0,0,58.68A43.174,43.174,0,0,0,42.779,80,43.168,43.168,0,0,0,73.024,67.847a41.229,41.229,0,0,0,9.14-13.139A3.691,3.691,0,0,0,81.333,50.569Z"
+                  transform="translate(0 -0.001)"
+                  fill="#fff"
+                  stroke="#000"
+                  stroke-width="2"
+                />
+              </g>
+            </g>
+          </svg> </span
+        >Dark Mode
+      </button>
+    </header>
+    <main id="main">
+      <section class="search_filter_container">
+        <div class="search_wrapper">
+          <span class="svg search_svg_wrapper">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width=".75em"
+              height=".75em"
+              viewBox="0 0 20.414 20.414"
+            >
+              <g id="search-alt-svgrepo-com" transform="translate(-2 -2)">
+                <path
+                  class="search_svg"
+                  id="Path_3"
+                  data-name="Path 3"
+                  d="M17,17l4,4"
+                  fill="none"
+                  stroke="#000"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+                <path
+                  class="search_svg"
+                  id="Path_4"
+                  data-name="Path 4"
+                  d="M19,11a8,8,0,1,1-8-8A8,8,0,0,1,19,11Z"
+                  fill="none"
+                  stroke="#000"
+                  stroke-width="2"
+                />
+              </g>
+            </svg>
+          </span>
+          <input
+            type="text"
+            class="search search_filter"
+            placeholder="Search for a country..."
+          />
+        </div>
+
+        <div class="filter_wrapper">
+          <select name="Filter Region" class="filter search_filter">
+            <option selected value="all">All Regions</option>
+            <option value="Africa">Africa</option>
+            <option value="Americas">America</option>
+            <option value="Asia">Asia</option>
+            <option value="Europe">Europe</option>
+            <option value="Oceania">Oceania</option>
+          </select>
+        </div>
+      </section>
+      <section class="element_container"></section>
+      <section class="detailed_element_wrapper disabled">
+        <div class="back_btn_wrapper">
+          <button class="back_btn">
+            <span class="svgIcon">
+              <svg
+                width="1.75em"
+                height="1.75em"
+                viewBox="0 0 1024 1024"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  class="fill_text"
+                  fill="#000000"
+                  d="M224 480h640a32 32 0 1 1 0 64H224a32 32 0 0 1 0-64z"
+                />
+                <path
+                  class="fill_text"
+                  fill="#000000"
+                  d="m237.248 512 265.408 265.344a32 32 0 0 1-45.312 45.312l-288-288a32 32 0 0 1 0-45.312l288-288a32 32 0 1 1 45.312 45.312L237.248 512z"
+                />
+              </svg> </span
+            >Back
+          </button>
+        </div>
+        <section class="detailed_element"></section>
+      </section>
+    </main>
+
+    <script>
+      const find = (className) => document.querySelector(`.${className}`);
+      const findAll = (className) => document.querySelectorAll(`.${className}`);
+      const setRootProperty = (variable, property) => {
+        document.documentElement.style.setProperty(variable, property);
+      };
+      domElements = {
+        element_container: find("element_container"),
+        dark_mode_btn: find("dark_mode_btn"),
+        detailed_element_wrapper: find("detailed_element_wrapper"),
+        detailed_element: find("detailed_element"),
+        search_filter_container: find("search_filter_container"),
+        back_btn: find("back_btn"),
+        searchElement: find("search"),
+        filter: find("filter"),
+      };
+    </script>
+  </body>
+</html>
