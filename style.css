@@ -261,7 +261,7 @@ body::before {
 }
 @media (min-width: 700px) {
   body::before {
-  top: 60%;
+  top: 50%;
 }
   .element_container {
     grid-template-columns: repeat(4, 1fr);
@@ -288,7 +288,7 @@ body::before {
 
 @media (min-width: 600px) and (min-aspect-ratio: 0.625) and (max-aspect-ratio: 1.6) {
     body::before {
-  top: 60%;
+  top: 50%;
 }
   .element_container {
     grid-template-columns: repeat(3, 1fr);
