@@ -60,12 +60,12 @@ body::before {
   content: "";
   display: var(--display);
   position: absolute;
-  height: 25vh;
-  width: 25vh;
+  height: 15vh;
+  width: 15vh;
   border-radius: 50%;
   border: 0.3em solid;
   border-color: var(--text_color) transparent var(--text_color) transparent;
-  top: 50%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -5%);
   animation: spin 1.4s ease-in-out infinite;
@@ -254,7 +254,15 @@ body::before {
 .s_disabled {
   display: none !important;
 }
+@keyframes spin {
+  to {
+    transform: translate(-50%, -5%) rotate(360deg);
+  }
+}
 @media (min-width: 700px) {
+  body::before {
+  top: 60%;
+}
   .element_container {
     grid-template-columns: repeat(4, 1fr);
     padding-inline: 0;
@@ -277,12 +285,11 @@ body::before {
     flex-direction: row;
   }
 }
-@keyframes spin {
-  to {
-    transform: translate(-50%, -5%) rotate(360deg);
-  }
-}
+
 @media (min-width: 600px) and (min-aspect-ratio: 0.625) and (max-aspect-ratio: 1.6) {
+    body::before {
+  top: 60%;
+}
   .element_container {
     grid-template-columns: repeat(3, 1fr);
     padding-inline: 0;
