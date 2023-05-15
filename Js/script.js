@@ -73,8 +73,8 @@ async function display() {
 }
 
 // function to handle element's click event
-async function elementClickHandler(country, results) {
-  
+async function elementClickHandler(country, results = false) {
+  if (!results) results = await getData();
 
   let result;
   results.forEach((val) => {
