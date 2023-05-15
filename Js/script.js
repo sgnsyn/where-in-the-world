@@ -67,12 +67,14 @@ async function display() {
     element_container.innerHTML += innnerHTMLstr;
   });
   stopSpinning();
-  return findAll("element");
+   const elements = findAll("element");
+  return { elements, results };
+
 }
 
 // function to handle element's click event
-async function elementClickHandler(country) {
-  const results = await getData().catch((error) => {});
+async function elementClickHandler(country, results) {
+  
 
   let result;
   results.forEach((val) => {
@@ -206,12 +208,12 @@ async function onWindowLoad() {
   applySavedTheme();
   filter.selectedIndex = 0;
   searchElement.value = "";
-  const elements = await display();
+  const { elements, results } = await display();
   // elements expand event listener
-  elements.forEach((element) => {
+  await elements.forEach((element) => {
     element.addEventListener("click", () => {
       const country = element.childNodes[3].childNodes[1].textContent;
-      elementClickHandler(country);
+      elementClickHandler(country, results);
     });
   });
 
