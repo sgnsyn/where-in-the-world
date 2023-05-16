@@ -115,12 +115,19 @@ async function elementClickHandler(country, results = false) {
       });
     });
   }
-  let borderStr = "";
+ let borderStr = "";
   if (borders) {
-    borders.forEach(
-      (border) =>
-        (borderStr += `<button onclick="elementClickHandler('${border}')" class="to_upper weight_regural border_country_btn">${border}</button>`)
-    );
+    borders.forEach((border) => {
+      if (border.includes("'")) {
+        border = border.replace(/'/g, "\\'");
+      }
+
+      borderStr += `<button
+      onclick="elementClickHandler('${border}')" 
+      onclick='elementClickHandler("${border}")' 
+      class="to_upper weight_regural border_country_btn"
+      >${border}</button>`;
+    });
   }
   let topLevelDomainStr = "";
   if (topLevelDomain)
