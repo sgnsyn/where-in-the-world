@@ -254,7 +254,7 @@ async function onWindowLoad() {
       if (searchPattern === "") return;
 
       const name = element.childNodes[3].childNodes[1].textContent;
-      const bool = name.toLowerCase().startsWith(searchPattern.toLowerCase());
+      const bool = name.toLowerCase().includes(searchPattern.toLowerCase());
 
       if (!bool) {
         element.classList.add("s_disabled");
