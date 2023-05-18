@@ -242,14 +242,14 @@ async function onWindowLoad() {
   //search functionality
   searchElement.addEventListener("input", (e) => {
     const searchPattern = e.target.value;
-    const regex = new RegExp(`^${searchPattern}.*`, "gi");
+    
 
     elements.forEach((element) => {
       element.classList.remove("s_disabled");
       if (searchPattern === "") return;
 
       const name = element.childNodes[3].childNodes[1].textContent;
-      const bool = regex.test(name);
+      const bool = name.toLowerCase().startsWith(searchPattern.toLowerCase());
 
       if (!bool) {
         element.classList.add("s_disabled");
