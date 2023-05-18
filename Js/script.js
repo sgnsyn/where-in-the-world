@@ -78,7 +78,6 @@ async function elementClickHandler(country, results = false) {
  if (!results) {
     results = JSON.parse(localStorage.getItem("results"));
     if (!results) results = await getData();
-    else console.log("from local storage");
   }
 
   let result;
