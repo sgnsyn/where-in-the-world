@@ -44,7 +44,7 @@ async function display() {
 
     //display values
     const innnerHTMLstr = ` <div class="element">
-    <img src="${flag}" alt=" ${name}flag" class="img" />
+    <img src="${flag}" alt=" ${name} flag" class="img" />
     <div class="element_description">
       <p class="name"><span class="to_upper bold">${name || "N\\A"}</span></p>
       <p>
@@ -162,7 +162,7 @@ async function elementClickHandler(country, results = false) {
 
   //display values
   const innerHTMLStr = `
-  <img src="${flag}" alt="${flag} flag" class="flag img" />
+  <img src="${flag}" alt="${name} flag" class="flag img" />
   <div class="detailed_description">
     <p class="country_name name">${name}</p>
     <div class="row">
