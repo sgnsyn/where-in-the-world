@@ -36,6 +36,7 @@ async function display() {
   // load object
   startSpinning();
   const results = await getData().catch((error) => {});
+  localStorage.setItem("results", JSON.stringify(results));
 
   results.forEach((result) => {
     // get values
@@ -74,7 +75,11 @@ async function display() {
 
 // function to handle element's click event
 async function elementClickHandler(country, results = false) {
-  if (!results) results = await getData();
+ if (!results) {
+    results = JSON.parse(localStorage.getItem("results"));
+    if (!results) results = await getData();
+    else console.log("from local storage");
+  }
 
   let result;
   results.forEach((val) => {
