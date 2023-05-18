@@ -32,7 +32,7 @@
   padding: 0;
   font-family: nunito;
   box-sizing: border-box;
-  transition: color 0.35s ease-in, background-color 0.35s ease-in-out;
+  
 }
 button {
   font-family: inherit;
